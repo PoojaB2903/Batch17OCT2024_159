@@ -1,0 +1,118 @@
+ctags: used to find where the functions are declared
+
+ctags -R . --->used to create index file
+
+Loading the index data in vi:
+vi file1.c
+:set tags=<path> (last line of file)
+set tags =../../tags (from main file)
+
+Navigating: to move to next file ctrl+]
+to undo :ctrl t
+
+git
+----
+git config credential.helper store --> first time it asks for password but later on it will not ask
+
+cscope
+-------
+same as ctags  
+csopes stores its data in a file called cscope.out
+
+cscope `find . -name'*.[ch]'` 
+find . -name '*.[ch]'>cscope.files
+cscope -i cscope.files -->we can search and navigate
+ to got to that file after searching go to the number and enter 
+come back :q
+close: ctrl+b
+
+gprof
+-----
+how much perc of time is spent in diff functions
+
+gcc -o app -pg main.c
+./app  ->when we run gmon.out file is produced
+gprof ./app gmon.out
+
+gdb
+----
+breakpoint
+watch
+navigate--next/n
+stepinto--step/s
+
+valgrind  : memory leaks
+-------
+gcc -o app main.c
+valgrind -v --tool=memcheck --leak-check=full --show-reachable=yes --log-file=valclient2./app
+
+vi valclient2
+
+
+C Language
+-----------
+
+Fast bcoz it directly feeds into system without jvm
+	
+/*  doc section 
+Description
+Author
+Date of creation/modification
+Version: 0.1v(starts with)   */
+
+1.0 -->stale version base of the proj
+
+
+doc section
+link section
+definition section: macros define/prototyping
+global declaration
+main
+gcc -std 90:  standard ncc compiling
+
+naming variables meaningful
+Alias name of structs are all caps
+
+carriage return returns to the starting position of line
+
+
+c tokens
+---------
+Keywords
+Identifers : var name
+constants
+Strings
+Special Symbols
+Operators
+
+"2002\0"
+"2002"+2 is not po3ssible bcoz strings are converted into ascii
+'2'+2 is possible ( ascii of 2 )+2
+
+
+a=10
+!a -->0
+
+! means-->if high changes to low and vice versa
+
+negatives values are also taken as high bcoz they are signed operators(symbol doesnt matter)
+
+table using bitwise
+
+
+primitive data type: char int long double
+user defined : struct enum unions
+derived: array function pointer
+
+Modifiers: signed, unsigned, long short 
+
+short will be reduced to standard ncc so that it can be accessiblein any application
+
+Conditional /Ternary operator
+
+a>b?(a>c)?a:c : (b>c)?b:c
+
+Why sizeof() is a operator but not function but looks like a function
+For sizeof if we give a++ is given then it doesnot execute but printf will execute
+Since it cant execute an expression it is not treated as a function
+

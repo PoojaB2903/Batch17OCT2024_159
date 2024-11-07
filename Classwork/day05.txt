@@ -1,0 +1,79 @@
+Make utility -- compile,build,execute as well as clean
+To maintain grp of prgrms
+28 oct
+--------
+make utility: 
+building files or compiling muktiple files:
+gcc -o app ./obj/calc.o ./obj/main.o
+mv app ./bin
+
+modify main.c
+gcc -c I ./inc/ ./src/main.c -o ./obj/main.o
+gcc -o ./bin/app01 ./obj/calc.o ./obj/main.o
+to run: ./bin/app
+
+
+Implicit declaration:u have used the interface but haven't declared the interface name
+If we make any changes in calc.c we have to update calc.h and follow the above steps again 
+
+
+We need only three files source, header and lib
+We can remove and rebuild bin,obj:  
+rm ./bin/*   
+rm ./obj/*   (These 2 should happen automatically)
+
+
+make utility fetches for the modified source code... It checks for the updations
+If there are n files modified it compiles all the files automatically
+And also cleans the files automatically
+
+
+
+Makefile:
+
+targetapp: target1 target2 ---- they are .o files
+ 	gcc -o .bin/targetapp target1 target 2
+target1: dependencies1
+	gcc -c sourcecodes
+target2: dependencies2
+	gcc -c sourcecodes
+
+
+#cleaning ---># commenting
+echo cleaning now
+rm -rf ./bin/*
+rm -rf ./obj/*
+echo cleaning done
+
+To run : make -f ./scripts/makefile  (From rootfile)
+         make (from scripts)
+
+area.c
+
+
+
+code coverage tool :gcov
+-------------------------
+
+which line of code executed and how many times
+
+gcc -fprofile-arcs -ftest-coverage <file1.c><file2.c> ---> gcov files will get created
+
+file1.gcno
+when we run it we get file1.gcda
+
+gcov file1.c -> it will give clear report
+
+
+Static Analysis using splint
+-----------------------------
+uninitalized pointers are wild pointers---very dangerous as they can point to anywhere
+it might crash prgrm or give garbage value
+
+warns potential bugs
+valgrind--dynamic memory tools opp to splint--- a static memory tool
+
+|                                     
+run time
+ 
+Error: Segmentation fault (core dumped)  (Eg house construction without proper land/address  collapses)

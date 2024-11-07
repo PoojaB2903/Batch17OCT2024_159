@@ -1,0 +1,66 @@
+gcc -E main.c  ----> e is for preproceesed file
+gcc  -E main.c >main.i
+gcc -Wall main.c
+-c only compiling not linking
+-s assembler code
+
+--save-temps to get intermediate files
+
+Make--- utility to maintain grp  of prgrms
+c flags
+
+
+mkdir makeUt
+cd makeut/
+mkdir bin obj inc src lib scripts
+ll
+
+#ifndef if not defined 
+
+#include < > ---> angular brackets are used when path  is not known#
+#include "" ---> path ismentuined
+
+
+;header file only declaration' in another file defining them
+
+gcc -c ./src/calc.c -->no such file is present
+-gcc -c ./src/calc.c -I./inc
+
+gcc -c ./src/calc.c -I./inc -o ./obj/calc.o
+
+
+1. create dir structure
+ mkdir mainprj 
+cd mainprj
+mainprj> mkdir bin inc obj lib scripts src
+2. src-.c
+   obj -.o
+   bin - executables
+   scripts- make files
+   inc- header(.h)
+
+3.create header file
+cd inc
+vi calc.h---declarations only
+4. create main file
+cd ../src --> .. means change to parent dir this takes to mainprj then cd src will take to src 
+                so both in one
+
+src> vi calc.c --->the main file
+cd ../
+
+mainprj> -gcc -c ./src/calc.c -I./inc  --->without i it wil give fatal error
+the obj will be saved in root file but should be in obj 
+mv calc.o ./obj/calc.o
+
+otherwise  gcc -c ./src/calc.c -I./inc -o ./obj/calc.o
+if we run in src: gcc -c -I../inc ./calc.c -o ../obj/calc.o
+do same for main.c
+5. write a main file in c
+
+Git
+gitignore -- ignoring files to be uploaded to cloud
+             doesnot allow certain folders to be uploaded onto cloud
+gitstatus -- any change in repistory
+git add  -- add file to local repistory
+

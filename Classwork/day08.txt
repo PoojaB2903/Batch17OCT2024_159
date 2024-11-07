@@ -1,0 +1,63 @@
+We use elseif ladder when we want to test other than numeric/single char i.e string,float
+Switch is used only for checking numeric/single char (ascii character)
+
+switch(cond)
+{
+   case 1: 
+		--
+		break;
+   case 2: 
+		--
+		break;
+   default:
+		--
+		break;( it is not necessary when default is at end but when default is at start then it must be present)
+
+}
+If break is not given in case then the immediate case will get executed
+We cannot have duplicate cases in switch but in else if ladder we can have
+
+It cannot take duplicates bcoz it forms a table of unique values(switch table) and internal binary search happens 
+so that it directly goes to that case.
+
+Process excited normally---> cleared residual memory or clear everything 
+we can directly take the input in switch(input)
+
+
+
+Loop:
+------
+1. initialize variable
+2. cond check
+3. sts to be executed
+4. counter
+
+3 types:
+1. do while
+2. while
+3. for
+
+2 category 
+1. entry control
+2. exit control
+
+   do
+    {
+
+    }while(cond);
+
+if scanf hasnt worked properly then we have to handle the error
+
+We need to define macros when we use numerics like 0 or 1
+Why theres a semicolon at the end of do while?
+
+
+For loop
+=========
+
+For loop is more powerful than while loop bcoz in initialize section we can have multiple variables
+and also we can have multiple counters and also multiple conditional sts
+
+Moreover in a singleline we can get all the things done and easy to understand
+
+We can ommit one or more section
