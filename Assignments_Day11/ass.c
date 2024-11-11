@@ -1,3 +1,15 @@
+/****************************************************************************************
+WAP to which should have the following functionalities
+1. scan employee recs 
+2. display
+3. search for a particulary employee based on
+  a. id
+  b. lName
+4. search for employess whos salary fall in
+   between 6-10K and display only those records
+ 
+5. update employee rec to change his/her lName
+**************************************************************************************/
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -50,7 +62,7 @@ int main()
 			break;
 	case 5: exit(0);
 			break;
-	default: printf("Enter valid number");
+	default: printf("\nEnter valid number");
 }
 	}
 	return 0;
@@ -116,7 +128,7 @@ void searchEmp(EMP e[],int n)
 			break;
 	case 3: searchSal(e,n);
 			break;
-	default: printf("Enter valid number");
+	default: printf("\nEnter valid number");
 			break;
 	}
 }
