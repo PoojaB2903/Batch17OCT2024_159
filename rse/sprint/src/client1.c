@@ -1,7 +1,7 @@
 /***************************************************************************
-*   DATE:08/12/2024
+*   DATE:13/12/2024
 *   OWNER : Group-05
-*   FILENAME : client.c
+*   FILENAME : client1.c
 *   DESCRIPTION: Contains code for a client that connects to a server 
 *               to perform various file operations, including searching for 
 *               a file, searching for a word or or phrase orstring within files, 
@@ -95,7 +95,11 @@ int main()
                 getchar(); // clear the buffer
                 scanf("%[^\n]s", buffer);
                 send(cfd, buffer, sizeof(buffer), 0);
+				memset(buffer,0,sizeof(buffer));
                 recv(cfd, buffer, sizeof(buffer), 0);
+				if(strncmp(buffer,"",sizeof(buffer))==0)
+					printf("\n File not found");
+				else
 				printf("\n %s",buffer);
 				break;
 
@@ -104,10 +108,15 @@ int main()
 				printf("Enter the word/sentence/pattern: ");
                 getchar(); // clear the buffer
                 scanf("%[^\n]s", buffer);
+				if(strncmp(buffer,"",3)==0 || strncmp(buffer," ",3)==0)
+				{
+					printf("\n Invalid string");
+					break;
+				}
                 send(cfd, buffer, sizeof(buffer), 0);
                 recv(cfd, buffer, sizeof(buffer), 0);
                 printf("Files that are having the pattern :\n%s", buffer);
-                if (strcmp(buffer, "") == 0) 
+                if (strncmp(buffer, "",sizeof(buffer)) == 0) 
                     printf("This string was not found in any file\n\n");
                 else
 				{
@@ -115,7 +124,7 @@ int main()
                     printf("String found in \n %s",buffer);
                     printf("\n\n Do you want to open file [Yes/No]");
                     scanf("%s",ans);
-                    if(strcmp(ans,"Yes")==0)
+                    if(strncmp(ans,"Yes",3)==0 || strncmp(ans,"YES",3)==0 || strncmp(ans,"Y",1)==0)
                         {
                             choice=4;
                             send(cfd,&choice , sizeof(choice), 0);
@@ -126,7 +135,7 @@ int main()
                             send(cfd,buffer,sizeof(buffer),0);
                             recv(cfd,buffer,sizeof(buffer),0);
                             printf("\n File content : \n %s",buffer);
-                            if (strcmp(buffer, "") == 0)
+                            if (strncmp(buffer, "",sizeof(buffer)) == 0)
                             printf("There is no content in file\n\n");
                             break;
                         }
@@ -144,7 +153,7 @@ int main()
 				send(cfd,buffer,sizeof(buffer),0);
 				recv(cfd,buffer,sizeof(buffer),0);
 				printf("\n File content : \n %s",buffer);
-                if (strcmp(buffer, "") == 0) 
+                if (strncmp(buffer, "",sizeof(buffer)) == 0) 
                     printf("There is no content in file\n\n");
                 break;
 

@@ -1,13 +1,25 @@
+/***************************************************************************
+*   DATE : 13/12/2024
+*   OWNER : GROUP-05
+*	FILENAME: searchForString.c
+*	DESCRIPTION: Contains function to search for a specific string in files 
+*	            within a directory and its subdirectories. It utilizes 
+*	            recursion to navigate through directories and logs the search 
+*	            results. The grep is used in execl and all the files are returned 
+*				and handled by pipe and return the buffer,if not found or if errors 
+*	            occur, appropriate messages are logged and returns NULL
+*****************************************************************************/
 #include<common.h>
 #include<functions.h>
 
 
 char* searchForString(const char* pattern) {
     static char buffer[MAXBUFF]; // Static buffer to persist after function returns
-
+	log_message("INFO","Searching for string");
     // Create a pipe to capture the output of grep
     int pipefd[2];
     if (pipe(pipefd) == -1) {
+		log_message("FATAL","Pipe Creation Failed");
         perror("Pipe failed");
         return NULL;
     }
@@ -24,7 +36,7 @@ char* searchForString(const char* pattern) {
         close(pipefd[0]);
 
         wait(NULL);  // Wait for the child process to finish
-
+		log_message("INFO","Searching for String Done");
         // Return the output captured from the pipe
         return buffer;
     } else if (pid == 0) {

@@ -14,7 +14,6 @@ char* get_time_str() {
 }
  
 void log_message(char *level, char *message) {
-	printf("Attempting to open log file: /home2/uaer46/sprint/data/logfile.txt\n");   
 	FILE *log_file = fopen("/home2/user46/sprint/data/logfile.txt", "a");
     if (log_file == NULL) {
         fprintf(stderr, "Error opening log file\n");

@@ -1,3 +1,14 @@
+/*********************************************************************************&********
+ *   DATE: 13/12/2024
+ *   OWNER : Group-05
+ *   FILENAME : server1.c
+ *   DESCRIPTION:  This file contains the server-side code for a multi-threaded server 
+ *                 that supports concurrent client connections. The server provides
+ *                  functionalities  like searching for files, searching for strings
+ *				   within files, and displaying file contents.  It manages multiple
+ *				   client requests using threads and ensures thread safety with mutex locks.
+ *				   Log file is maintained to monitor at 4 levels(INFO,DEBUG,FATAL,WARN)
+ *******************************************************************************************/
 #include<common.h>
 #include<functions.h>
 
@@ -10,7 +21,7 @@ int main()
 	log_message("INFO","Creating Socket");
 	int sfd = 0, retValue=0, *csfd=0;
 	//int clientAddlen = 0;
-	struct sockaddr_in serv_address, client_address;
+	struct sockaddr_in serv_address;
 
 	
 	sfd = socket(AF_INET,SOCK_STREAM,0);
@@ -53,9 +64,9 @@ int main()
 
     while (1) {
         pthread_mutex_lock(&client_count_lock);
-        if (active_clients >= MAX_CLIENTS) {
+        if (active_clients >= MAX_CLIENTS) {    
             pthread_mutex_unlock(&client_count_lock);
-			log_message("WARN","Max xlients reached,in waiting state");
+			log_message("WARN","Max clients reached,in waiting state");
             sleep(1);
             continue;
         }
@@ -85,8 +96,8 @@ int main()
 
         pthread_t clientThread;
         if (pthread_create(&clientThread, NULL, handleClient, csfd) != 0) {
-            close(*csfd);
-            free(csfd);
+           close(*csfd);
+           	free(csfd);
 			log_message("FATAL","Failed to create thread");
             pthread_mutex_lock(&client_count_lock);
             active_clients--;
@@ -105,7 +116,6 @@ int main()
 void* handleClient(void* csfdp)
 { 
 	int csfd= *(int *)csfdp;
-	free(csfdp);
 	int choice;
 	char result[MAXBUFF]= {0,};
 	static char buffer[MAXBUFF]={0,};
@@ -118,8 +128,7 @@ void* handleClient(void* csfdp)
 				log_message("DEBUG","Received request to list files");
 				printf("\n choice is 1");
                 memset(result, 0, sizeof(result));  // Clear result before use
-             strcpy( result,get_ls_output());
-
+          		strncpy( result,get_ls_output(),sizeof(result));
                 send(csfd, result, sizeof(result), 0);
 				log_message("DEBUG", "Sent file list to client.");
                 break;
@@ -128,38 +137,37 @@ void* handleClient(void* csfdp)
 				log_message("DEBUG", "Received request to search for a file.");
                 memset(result, 0, sizeof(result));  // Clear result before use
                 recv(csfd, buffer, sizeof(buffer), 0);
-                strcpy(result,searchForFile(buffer));
+                strncpy(result,searchForFile(buffer),sizeof(result));
+				if(strncmp(result,"",3)==0)
+				strcpy(result,"Not found");
                 send(csfd, result, sizeof(result), 0);
 				log_message("DEBUG", "Sent search result to client.");
 				break;
 			case SEARCH_STRING: // serach for a pattern
 				printf("\n choice is 3");
 				log_message("DEBUG", "Received request to search for a pattern.");
-				 memset(buffer, 0, sizeof(buffer));  // Clear buffer before receiving data
+				memset(buffer, 0, sizeof(buffer));  // Clear buffer before receiving data
                 recv(csfd, buffer, sizeof(buffer), 0);
-                
-                strcpy(result,searchForString(buffer));
-                
+                strncpy(result,searchForString(buffer),sizeof(result));
                 send(csfd, result, sizeof(result), 0);
                 memset(result, 0, sizeof(result));  // Clear result before use
-				 log_message("DEBUG", "Sent pattern search result to client.");
+				log_message("DEBUG", "Sent pattern search result to client.");
                 break;
 			case DISPLAY_CONTENT: //Print the content of file
 				printf("\n Choice is 4");
 				log_message("DEBUG", "Received request to display file content.");
 				memset(buffer,0,sizeof(buffer));
 				recv(csfd,buffer,sizeof(buffer),0);
-				
 				printf("\n %s",buffer);
 				memset(result,0,sizeof(result));
-				strcpy(result,displayFileContents(buffer));
-				
+				strncpy(result,displayFileContents(buffer),sizeof(result));
 				send(csfd,result,sizeof(result),0);
 				log_message("DEBUG", "Sent file content to client.");
 				break;
-			  case 5:  // Client exit
+			  case EXIT_PROGRAM:  // Client exit
                 log_message("INFO","Client disconnected");
                 close(csfd);
+				free(csfdp);
                 pthread_mutex_lock(&client_count_lock);
                 active_clients--;
                 pthread_mutex_unlock(&client_count_lock);
@@ -170,6 +178,7 @@ void* handleClient(void* csfdp)
 }
                 log_message("INFO","Client disconnected");
 				close(csfd);
+				free(csfdp);
                 pthread_mutex_lock(&client_count_lock);
                 active_clients--;
                 pthread_mutex_unlock(&client_count_lock);

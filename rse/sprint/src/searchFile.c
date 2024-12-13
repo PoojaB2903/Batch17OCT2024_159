@@ -1,28 +1,20 @@
+/****************************************************************************
+*   DATE : 13/12/2024
+*   OWNER : GROUP-05
+*	FILENAME:searchForFile.c
+*	DESCRIPTION: Contains the code to search for a file in the filesystem 
+*	            based on the provided file name. If the file exists, 
+*	            it returns the absolute filepath; else returns NULL and 
+*	            it logs an error and stores an appropriate message.
+*****************************************************************************/
+
 #include<common.h>
 #include<functions.h>
-
-
-/*char *searchForFile(char *filename) {
-	
-	char *resolvedPath = (char *)malloc(PATH_MAX);
-    
-    if (realpath(filename, resolvedPath) != NULL) {
-        return resolvedPath; // Return the absolute path if file exists
-    }
-	else {
-        free(resolvedPath); // Free memory if the file doesn't exist
-        return NULL; // Return NULL if file does not exist
-    }
-}*/
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/wait.h>
 
 char *searchForFile(char *filename) {
     const char *homeDir = "/home2/user46";  // Hardcoded home directory
     if (homeDir == NULL) {
+		log_message("INFO","Searching For File");
         fprintf(stderr, "Home directory not found\n");
         return NULL;
     }
@@ -30,6 +22,7 @@ char *searchForFile(char *filename) {
     // Use a pipe to capture the output of the find command
     int pipefd[2];
     if (pipe(pipefd) == -1) {
+		log_message("FATAL","Pipe Creation Failed");
         perror("pipe");
         return NULL;
     }
@@ -63,14 +56,16 @@ char *searchForFile(char *filename) {
         wait(NULL);
 
         // Read the output of the find command from the pipe
-        char *resolvedPath = (char *)malloc(PATH_MAX);
+        char *resolvedPath = (char *)malloc(PATH_MAX*sizeof(char));
         if (resolvedPath == NULL) {
+			log_message("FATAL","Memory allocation Failed");
             perror("malloc");
             return NULL;
         }
 
         ssize_t len = read(pipefd[0], resolvedPath, PATH_MAX - 1);
         if (len == -1) {
+			log_message("FATAL", "Cannot get resolvedPath");
             perror("read");
             free(resolvedPath);
             return NULL;
@@ -78,6 +73,7 @@ char *searchForFile(char *filename) {
 
         resolvedPath[len] = '\0';  // Null-terminate the string
 
+        close(pipefd[0]);
         // If the output is empty, the file was not found
         if (len == 0) {
             free(resolvedPath);
@@ -85,9 +81,7 @@ char *searchForFile(char *filename) {
         }
 
         // Close the read end of the pipe
-        close(pipefd[0]);
-
+		log_message("INFO","Searching for file is done");
         return resolvedPath;  // Return the resolved file path
     }
 }
-
