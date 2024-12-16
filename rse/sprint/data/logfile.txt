@@ -349,3 +349,255 @@
 [2024-12-13 18:07:20] INFO: Listening to clients
 [2024-12-13 18:07:22] INFO: Client connected
 [2024-12-13 18:07:24] DEBUG: Received request to search for a file.
+[2024-12-13 18:35:39] INFO: Creating Socket
+[2024-12-13 18:35:40] INFO: Socket created
+[2024-12-13 18:35:40] INFO: Building Port
+[2024-12-13 18:35:40] INFO: Listening to clients
+[2024-12-13 18:38:34] INFO: Creating Socket
+[2024-12-13 18:38:34] INFO: Socket created
+[2024-12-13 18:38:34] INFO: Building Port
+[2024-12-13 18:38:34] INFO: Listening to clients
+[2024-12-13 18:39:17] INFO: Client connected
+[2024-12-13 18:39:20] DEBUG: Received request to search for a file.
+[2024-12-13 18:41:11] INFO: Creating Socket
+[2024-12-13 18:41:17] INFO: Socket created
+[2024-12-13 18:41:17] INFO: Building Port
+[2024-12-13 18:41:24] INFO: Listening to clients
+[2024-12-13 18:41:44] INFO: Client connected
+[2024-12-13 18:42:29] INFO: Creating Socket
+[2024-12-13 18:42:29] INFO: Socket created
+[2024-12-13 18:42:29] INFO: Building Port
+[2024-12-13 18:42:29] FATAL: Bind failed
+[2024-12-13 18:42:56] INFO: Creating Socket
+[2024-12-13 18:42:57] INFO: Socket created
+[2024-12-13 18:42:57] INFO: Building Port
+[2024-12-13 18:42:57] FATAL: Bind failed
+[2024-12-13 18:43:48] INFO: Creating Socket
+[2024-12-13 18:43:49] INFO: Socket created
+[2024-12-13 18:43:49] INFO: Building Port
+[2024-12-13 18:43:49] INFO: Listening to clients
+[2024-12-13 18:43:54] INFO: Client connected
+[2024-12-13 18:43:57] DEBUG: Received request to list files
+[2024-12-13 18:43:57] DEBUG: Sent file list to client.
+[2024-12-13 18:43:59] DEBUG: Received request to search for a file.
+[2024-12-13 18:44:05] INFO: Searching for file is done
+[2024-12-13 18:44:05] DEBUG: Sent search result to client.
+[2024-12-13 18:44:15] DEBUG: Received request to search for a file.
+[2024-12-13 18:44:19] INFO: Searching for file is done
+[2024-12-13 18:44:19] DEBUG: Sent search result to client.
+[2024-12-13 18:44:25] DEBUG: Received request to search for a file.
+[2024-12-13 18:50:39] INFO: Creating Socket
+[2024-12-13 18:50:39] INFO: Socket created
+[2024-12-13 18:50:39] INFO: Building Port
+[2024-12-13 18:50:39] INFO: Listening to clients
+[2024-12-13 18:50:44] INFO: Client connected
+[2024-12-13 18:50:47] DEBUG: Received request to search for a file.
+[2024-12-13 18:53:02] INFO: Creating Socket
+[2024-12-13 18:53:02] INFO: Socket created
+[2024-12-13 18:53:02] INFO: Building Port
+[2024-12-13 18:53:02] INFO: Listening to clients
+[2024-12-13 18:53:04] INFO: Client connected
+[2024-12-13 18:53:09] DEBUG: Received request to search for a file.
+[2024-12-13 18:53:57] INFO: Creating Socket
+[2024-12-13 18:53:57] INFO: Socket created
+[2024-12-13 18:53:57] INFO: Building Port
+[2024-12-13 18:53:57] FATAL: Bind failed
+[2024-12-13 18:54:38] INFO: Creating Socket
+[2024-12-13 18:54:38] INFO: Socket created
+[2024-12-13 18:54:38] INFO: Building Port
+[2024-12-13 18:54:38] FATAL: Bind failed
+[2024-12-13 18:54:54] INFO: Creating Socket
+[2024-12-13 18:54:54] INFO: Socket created
+[2024-12-13 18:54:54] INFO: Building Port
+[2024-12-13 18:54:54] FATAL: Bind failed
+[2024-12-13 18:55:14] INFO: Creating Socket
+[2024-12-13 18:55:14] INFO: Socket created
+[2024-12-13 18:55:14] INFO: Building Port
+[2024-12-13 18:55:14] INFO: Listening to clients
+[2024-12-13 18:55:18] INFO: Client connected
+[2024-12-13 18:55:21] DEBUG: Received request to search for a file.
+[2024-12-13 18:57:37] INFO: Creating Socket
+[2024-12-13 18:57:37] INFO: Socket created
+[2024-12-13 18:57:37] INFO: Building Port
+[2024-12-13 18:57:37] FATAL: Bind failed
+[2024-12-13 18:57:45] INFO: Creating Socket
+[2024-12-13 18:57:45] INFO: Socket created
+[2024-12-13 18:57:45] INFO: Building Port
+[2024-12-13 18:57:45] FATAL: Bind failed
+[2024-12-13 18:58:06] INFO: Creating Socket
+[2024-12-13 18:58:06] INFO: Socket created
+[2024-12-13 18:58:06] INFO: Building Port
+[2024-12-13 18:58:06] INFO: Listening to clients
+[2024-12-13 18:58:19] INFO: Client connected
+[2024-12-13 18:58:21] DEBUG: Received request to search for a file.
+[2024-12-13 19:13:39] INFO: Creating Socket
+[2024-12-13 19:13:39] INFO: Socket created
+[2024-12-13 19:13:39] INFO: Building Port
+[2024-12-13 19:13:39] INFO: Listening to clients
+[2024-12-13 19:13:43] INFO: Client connected
+[2024-12-13 19:13:45] DEBUG: Received request to search for a file.
+[2024-12-13 19:15:10] INFO: Creating Socket
+[2024-12-13 19:15:10] INFO: Socket created
+[2024-12-13 19:15:10] INFO: Building Port
+[2024-12-13 19:15:10] FATAL: Bind failed
+[2024-12-13 19:15:37] INFO: Creating Socket
+[2024-12-13 19:15:37] INFO: Socket created
+[2024-12-13 19:15:37] INFO: Building Port
+[2024-12-13 19:15:37] INFO: Listening to clients
+[2024-12-13 19:15:43] INFO: Client connected
+[2024-12-13 19:15:46] DEBUG: Received request to search for a file.
+[2024-12-13 19:17:29] INFO: Creating Socket
+[2024-12-13 19:17:29] INFO: Socket created
+[2024-12-13 19:17:29] INFO: Building Port
+[2024-12-13 19:17:29] INFO: Listening to clients
+[2024-12-13 19:17:36] INFO: Client connected
+[2024-12-13 19:17:38] DEBUG: Received request to search for a file.
+[2024-12-13 19:17:41] DEBUG: Sent search result to client.
+[2024-12-13 19:17:45] DEBUG: Received request to list files
+[2024-12-13 19:17:45] DEBUG: Sent file list to client.
+[2024-12-13 19:17:52] DEBUG: Received request to search for a file.
+[2024-12-13 19:17:55] DEBUG: Sent search result to client.
+[2024-12-13 19:20:20] DEBUG: Received request to search for a pattern.
+[2024-12-13 19:20:22] INFO: Searching for string
+[2024-12-13 19:20:23] INFO: Searching for String Done
+[2024-12-13 19:20:23] DEBUG: Sent pattern search result to client.
+[2024-12-13 19:20:26] DEBUG: Received request to display file content.
+[2024-12-13 19:22:44] INFO: Creating Socket
+[2024-12-13 19:22:44] INFO: Socket created
+[2024-12-13 19:22:44] INFO: Building Port
+[2024-12-13 19:22:44] FATAL: Bind failed
+[2024-12-13 19:22:52] INFO: Creating Socket
+[2024-12-13 19:22:52] INFO: Socket created
+[2024-12-13 19:22:52] INFO: Building Port
+[2024-12-13 19:22:52] FATAL: Bind failed
+[2024-12-13 19:22:59] INFO: Creating Socket
+[2024-12-13 19:22:59] INFO: Socket created
+[2024-12-13 19:22:59] INFO: Building Port
+[2024-12-13 19:22:59] FATAL: Bind failed
+[2024-12-13 19:23:09] INFO: Creating Socket
+[2024-12-13 19:23:10] INFO: Socket created
+[2024-12-13 19:23:10] INFO: Building Port
+[2024-12-13 19:23:10] FATAL: Bind failed
+[2024-12-13 19:23:23] INFO: Creating Socket
+[2024-12-13 19:23:24] INFO: Socket created
+[2024-12-13 19:23:24] INFO: Building Port
+[2024-12-13 19:23:24] FATAL: Bind failed
+[2024-12-13 19:24:16] INFO: Creating Socket
+[2024-12-13 19:24:16] INFO: Socket created
+[2024-12-13 19:24:16] INFO: Building Port
+[2024-12-13 19:24:16] INFO: Listening to clients
+[2024-12-13 19:24:20] INFO: Client connected
+[2024-12-13 19:24:32] DEBUG: Received request to search for a file.
+[2024-12-13 19:24:41] DEBUG: Sent search result to client.
+[2024-12-13 19:24:48] INFO: Client disconnected
+[2024-12-13 19:27:33] INFO: Creating Socket
+[2024-12-13 19:27:33] INFO: Socket created
+[2024-12-13 19:27:33] INFO: Building Port
+[2024-12-13 19:27:33] INFO: Listening to clients
+[2024-12-13 19:27:38] INFO: Client connected
+[2024-12-13 19:27:40] DEBUG: Received request to search for a pattern.
+[2024-12-13 19:27:47] INFO: Searching for string
+[2024-12-13 19:27:48] INFO: Searching for String Done
+[2024-12-13 19:27:48] DEBUG: Sent pattern search result to client.
+[2024-12-13 19:28:11] INFO: Client disconnected
+[2024-12-13 19:28:35] INFO: Creating Socket
+[2024-12-13 19:28:36] INFO: Socket created
+[2024-12-13 19:28:36] INFO: Building Port
+[2024-12-13 19:28:36] INFO: Listening to clients
+[2024-12-13 19:28:37] INFO: Client connected
+[2024-12-13 19:28:39] DEBUG: Received request to list files
+[2024-12-13 19:28:39] DEBUG: Sent file list to client.
+[2024-12-13 19:28:40] DEBUG: Received request to search for a file.
+[2024-12-13 19:28:44] DEBUG: Sent search result to client.
+[2024-12-13 19:28:53] DEBUG: Received request to search for a file.
+[2024-12-13 19:28:56] INFO: Searching for file is done
+[2024-12-13 19:28:56] DEBUG: Sent search result to client.
+[2024-12-13 19:29:00] DEBUG: Received request to search for a file.
+[2024-12-13 19:29:00] INFO: Searching for file is done
+[2024-12-13 19:29:00] DEBUG: Sent search result to client.
+[2024-12-13 19:29:00] DEBUG: Received request to search for a file.
+[2024-12-13 19:29:00] INFO: Searching for file is done
+[2024-12-16 06:34:45] INFO: Creating Socket
+[2024-12-16 06:34:45] INFO: Socket created
+[2024-12-16 06:34:45] INFO: Building Port
+[2024-12-16 06:34:45] INFO: Listening to clients
+[2024-12-16 06:34:56] INFO: Client connected
+[2024-12-16 06:35:03] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:35:06] INFO: Searching for string
+[2024-12-16 06:35:06] INFO: Searching for String Done
+[2024-12-16 06:35:06] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:35:10] INFO: Client connected
+[2024-12-16 06:35:14] DEBUG: Received request to list files
+[2024-12-16 06:35:14] DEBUG: Sent file list to client.
+[2024-12-16 06:35:24] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:35:27] INFO: Searching for string
+[2024-12-16 06:35:27] INFO: Searching for String Done
+[2024-12-16 06:35:27] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:35:30] DEBUG: Received request to search for a file.
+[2024-12-16 06:35:38] INFO: Searching for file is done
+[2024-12-16 06:35:38] DEBUG: Sent search result to client.
+[2024-12-16 06:35:40] INFO: Client disconnected
+[2024-12-16 06:35:43] INFO: Client connected
+[2024-12-16 06:35:46] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:35:49] INFO: Searching for string
+[2024-12-16 06:35:49] INFO: Searching for String Done
+[2024-12-16 06:35:49] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:35:54] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:35:57] INFO: Searching for string
+[2024-12-16 06:35:57] INFO: Searching for String Done
+[2024-12-16 06:35:57] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:36:10] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:36:13] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:36:19] INFO: Searching for string
+[2024-12-16 06:36:19] INFO: Searching for String Done
+[2024-12-16 06:36:19] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:36:21] INFO: Searching for string
+[2024-12-16 06:36:21] INFO: Searching for String Done
+[2024-12-16 06:36:21] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:36:44] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:36:47] INFO: Searching for string
+[2024-12-16 06:36:47] INFO: Searching for String Done
+[2024-12-16 06:36:47] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:36:58] INFO: Client connected
+[2024-12-16 06:37:00] DEBUG: Received request to search for a file.
+[2024-12-16 06:37:05] DEBUG: Sent search result to client.
+[2024-12-16 06:37:06] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:37:06] INFO: Searching for string
+[2024-12-16 06:37:06] INFO: Searching for String Done
+[2024-12-16 06:37:06] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:37:06] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:37:06] INFO: Searching for string
+[2024-12-16 06:37:06] INFO: Searching for String Done
+[2024-12-16 06:37:16] INFO: Creating Socket
+[2024-12-16 06:37:16] INFO: Socket created
+[2024-12-16 06:37:16] INFO: Building Port
+[2024-12-16 06:37:16] FATAL: Bind failed
+[2024-12-16 06:37:19] INFO: Creating Socket
+[2024-12-16 06:37:19] INFO: Socket created
+[2024-12-16 06:37:19] INFO: Building Port
+[2024-12-16 06:37:19] FATAL: Bind failed
+[2024-12-16 06:37:20] INFO: Creating Socket
+[2024-12-16 06:37:20] INFO: Socket created
+[2024-12-16 06:37:20] INFO: Building Port
+[2024-12-16 06:37:20] FATAL: Bind failed
+[2024-12-16 06:37:22] INFO: Creating Socket
+[2024-12-16 06:37:22] INFO: Socket created
+[2024-12-16 06:37:22] INFO: Building Port
+[2024-12-16 06:37:22] FATAL: Bind failed
+[2024-12-16 06:38:11] INFO: Creating Socket
+[2024-12-16 06:38:11] INFO: Socket created
+[2024-12-16 06:38:11] INFO: Building Port
+[2024-12-16 06:38:11] INFO: Listening to clients
+[2024-12-16 06:39:16] INFO: Client connected
+[2024-12-16 06:39:21] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:39:25] INFO: Searching for string
+[2024-12-16 06:39:25] INFO: Searching for String Done
+[2024-12-16 06:39:25] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:39:31] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:39:33] INFO: Searching for string
+[2024-12-16 06:39:33] INFO: Searching for String Done
+[2024-12-16 06:39:33] DEBUG: Sent pattern search result to client.
+[2024-12-16 06:39:52] DEBUG: Received request to search for a pattern.
+[2024-12-16 06:40:10] INFO: Searching for string
+[2024-12-16 06:40:10] INFO: Searching for String Done
+[2024-12-16 06:40:10] DEBUG: Sent pattern search result to client.

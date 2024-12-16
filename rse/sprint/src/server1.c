@@ -137,9 +137,12 @@ void* handleClient(void* csfdp)
 				log_message("DEBUG", "Received request to search for a file.");
                 memset(result, 0, sizeof(result));  // Clear result before use
                 recv(csfd, buffer, sizeof(buffer), 0);
-                strncpy(result,searchForFile(buffer),sizeof(result));
-				if(strncmp(result,"",3)==0)
-				strcpy(result,"Not found");
+                char *result1=searchForFile(buffer);
+				if(result1==NULL)
+					strcpy(result,"Not found");
+				else{
+					strcpy(result,result1);
+					free(result1);}
                 send(csfd, result, sizeof(result), 0);
 				log_message("DEBUG", "Sent search result to client.");
 				break;
